@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #f8f4ee 0%, #f1e8dc 100%);
+  color: #1a1817;
+}
+
+::selection {
+  background-color: rgba(140, 109, 76, 0.2);
+}
+
+.texture {
+  background-size: 16px 16px;
+}
+
+.luxury-link {
+  position: relative;
+}
+
+.luxury-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s ease;
+  background-color: #af9062;
+}
+
+.luxury-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
